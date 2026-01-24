@@ -63,7 +63,7 @@ const CustomCursor: React.FC = () => {
       style={{
         left: pos.x,
         top: pos.y,
-        transform: `translate(-50%, -50%) scale(${hovering ? 3 : 1})`,
+        transform: `translate(-50%, -50%) scale(${hovering ? 2.5 : 1})`,
       }}
     />
   );
@@ -75,10 +75,10 @@ const CursorDot = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.763);
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { RefObject } from "react";
 import styled from "styled-components";
+import NavClock from "./Clock";
 
 interface HeaderProps {
   sections: { id: string; label: string; ref: RefObject<HTMLElement | null> }[];
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
             {sections.map((s) => (
               <li key={s.id}>
                 <StyledNavLink
-                  active={active === s.id}
+                  $active={active === s.id}
                   onClick={() => scrollTo(s.ref)}
                 >
                   {s.label}
@@ -55,6 +56,7 @@ const Header: React.FC<HeaderProps> = ({ sections }) => {
             ))}
           </StyleNavLinks>
         </nav>
+        <NavClock />
       </StyledNavContainer>
     </StyledHeader>
   );
@@ -66,16 +68,15 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgb(20, 20, 20);
+  background: ${({ theme }) => theme.colors.headerBackground};
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 const StyledNavContainer = styled.div`
-  max-width: 1100px;
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
   margin: 0 auto;
-  padding: 1rem 1.5rem;
-
+  padding: ${({ theme }) => theme.spacing.s16};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,30 +84,14 @@ const StyledNavContainer = styled.div`
 
 const StyleNavLinks = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: ${({ theme }) => theme.spacing.s20};
   list-style: none;
 `;
 
-const StyledNavLink = styled.button<{ active: boolean }>`
+const StyledNavLink = styled.button<{ $active: boolean }>`
   background: none;
   border: none;
-
-  /* color: ${({ active }) => (active ? "red" : "#8f8f8f")}; */
-  color: #8f8f8f;
-
-  font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
-  padding: 10px;
-
-  /* &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: ${({ active }) => (active ? "100%" : "0%")};
-    height: 2px;
-    background: var(--color-primary);
-    transition: width 0.25s ease;
-  } */
+  font-size: ${({ theme }) => theme.fontSizes.fs14};
 `;
