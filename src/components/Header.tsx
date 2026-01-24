@@ -83,26 +83,23 @@ const StyledNavContainer = styled.div`
 
 const StyleNavLinks = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 20px;
   list-style: none;
 `;
 
 const StyledNavLink = styled.button<{ active: boolean }>`
   background: none;
   border: none;
-  cursor: pointer;
 
-  color: ${({ active }) => (active ? "red" : "#8f8f8f")};
+  /* color: ${({ active }) => (active ? "red" : "#8f8f8f")}; */
+  color: #8f8f8f;
 
   font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
+  padding: 10px;
 
-  &:hover {
-    background-color: red;
-  }
-
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -111,5 +108,5 @@ const StyledNavLink = styled.button<{ active: boolean }>`
     height: 2px;
     background: var(--color-primary);
     transition: width 0.25s ease;
-  }
+  } */
 `;
