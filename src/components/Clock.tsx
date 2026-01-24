@@ -39,5 +39,8 @@ export default Clock;
 
 const ClockWrapper = styled.div`
   font-family: "Geist Mono", monospace;
+  font-size: ${({ theme }) => theme.fontSizes.fs12};
   white-space: nowrap;
+  line-height: ${({ theme }) => theme.lheight.lh16};
+  letter-spacing: ${({ theme }) => theme.lspacing.ls48};
 `;

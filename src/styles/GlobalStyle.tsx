@@ -21,17 +21,17 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     cursor: none; /* Hide default cursor */
     font-family: 'Inter', sans-serif;
-    font-size: ${({ theme }) => theme.fontSizes.fs12};
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
-    letter-spacing: ${({ theme }) => theme.lspacing.ls1};
-  }
+    font-size: ${({ theme }) => theme.fontSizes.fs16};
+    background-color: ${({ theme }) => theme.colors.black2};
+    color: ${({ theme }) => theme.colors.grey1};
+    letter-spacing: ${({ theme }) => theme.lspacing.ls16};
+    line-height: ${({ theme }) => theme.lheight.lh24}};
 
   /* Remove cursor on interactive elements */
   a,
   button {
     cursor: none;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.grey1};
   }
 
   /* Remove default link styling */

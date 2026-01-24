@@ -4,6 +4,8 @@ import styled, { ThemeProvider } from "styled-components";
 import CustomCursor from "./components/CustomCursor";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
+import HomeSection from "./sections/HomeSection";
+import { CursorProvider } from "./context/CursorContext";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -24,36 +26,36 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledWrapper>
-        <GlobalStyle />
-        <CustomCursor />
+      <CursorProvider>
+        <StyledWrapper>
+          <GlobalStyle />
+          <CustomCursor />
 
-        <Header sections={sections} />
-        <StyledContent>
-          <StyledSection ref={homeRef} id="home">
-            <StyledH1>Home</StyledH1>
-          </StyledSection>
+          <Header sections={sections} />
+          <StyledContent>
+            <HomeSection sectionRef={homeRef} />
 
-          <StyledSection ref={aboutRef} id="about">
-            <StyledH1>About</StyledH1>
-          </StyledSection>
+            <StyledSection ref={aboutRef} id="about">
+              <StyledH1>About</StyledH1>
+            </StyledSection>
 
-          <StyledSection ref={stackRef} id="stack">
-            <StyledH1>Stack</StyledH1>
-          </StyledSection>
+            <StyledSection ref={stackRef} id="stack">
+              <StyledH1>Stack</StyledH1>
+            </StyledSection>
 
-          <StyledSection ref={experienceRef} id="experience">
-            <StyledH1>Experience</StyledH1>
-          </StyledSection>
+            <StyledSection ref={experienceRef} id="experience">
+              <StyledH1>Experience</StyledH1>
+            </StyledSection>
 
-          <StyledSection ref={personalRef} id="personal">
-            <StyledH1>Personal</StyledH1>
-          </StyledSection>
-          <StyledSection ref={contactRef} id="contact">
-            <StyledH1>Contact</StyledH1>
-          </StyledSection>
-        </StyledContent>
-      </StyledWrapper>
+            <StyledSection ref={personalRef} id="personal">
+              <StyledH1>Personal</StyledH1>
+            </StyledSection>
+            <StyledSection ref={contactRef} id="contact">
+              <StyledH1>Contact</StyledH1>
+            </StyledSection>
+          </StyledContent>
+        </StyledWrapper>
+      </CursorProvider>
     </ThemeProvider>
   );
 };
@@ -61,19 +63,18 @@ const App = () => {
 export default App;
 
 const StyledWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.black2};
 `;
 
 const StyledContent = styled.main`
   max-width: 640px;
   margin: 0 auto;
-  background-color: red;
 `;
 
 const StyledSection = styled.section`
   min-height: 100vh;
   padding: 6rem 1.5rem;
-  scroll-margin-top: 90px; /* sticky header offset */
+  scroll-margin-top: 55px; /* sticky header offset */
 `;
 
 const StyledH1 = styled.h1`
