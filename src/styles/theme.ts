@@ -1,10 +1,10 @@
 export const theme = {
   colors: {
     background: "#0D0D0D",
-    headerBackground: "#141414ff",
+    background2: "#141414ff",
     border: "#94a3b819",
     text: "#8f8f8f",
-    "highlighted-text": "#FFFFFF",
+    text2: "#FFFFFF",
   },
   fontSizes: {
     fs12: "12px",

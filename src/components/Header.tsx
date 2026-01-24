@@ -68,7 +68,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 100;
-  background: ${({ theme }) => theme.colors.headerBackground};
+  background: ${({ theme }) => theme.colors.background2};
   backdrop-filter: blur(12px);
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
