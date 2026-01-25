@@ -14,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./components/Navigation";
 import ExperienceSection from "./sections/ExperienceSection";
+import Signature from "./components/Signature";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -56,7 +57,9 @@ const App = () => {
             <StyledSection ref={contactRef} id="contact">
               <StyledH1>Contact</StyledH1>
             </StyledSection>
+            {/* <Signature /> */}
           </StyledContent>
+
           <Navigation sections={sections} />
         </StyledWrapper>
       </CursorProvider>

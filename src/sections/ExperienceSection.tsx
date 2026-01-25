@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import ClarivateLogo from "../assets/clrvt.svg";
+import IvcLogo from "../assets/ivc.svg";
+import MarbleLogo from "../assets/marble.svg";
 
 const experienceData = [
   {
@@ -7,26 +10,35 @@ const experienceData = [
     company: "Clarivate",
     description:
       "Build a user-friendly web app that helps professionals manage their intellectual properties efficiently. Design interactive dashboards with real-time updates to make tracking and monitoring simple for users.",
+    logo: ClarivateLogo,
   },
   {
     years: "11/2021 - 07/2024",
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     company: "IVC Evidensia",
     description:
       "Work on a mobile app that supports veterinary clinics worldwide. In addition, develop a web app that streamlines daily tasks and makes workflows more intuitive and efficient for users.",
+    logo: IvcLogo,
   },
   {
     years: "04/2021 - 11/2021",
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     company: "Marble IT",
     description:
       "Develop a mobile app that helps users reconnect with contacts after losing their phone, ensuring a seamless and reliable experience.",
+    logo: MarbleLogo,
   },
 ];
 
-const ExperienceSection: React.FC = () => {
+interface ExperienceSectionProps {
+  sectionRef: React.RefObject<HTMLElement | null>;
+}
+
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({
+  sectionRef,
+}) => {
   return (
-    <SectionWrapper>
+    <SectionWrapper ref={sectionRef} id="experience">
       <SectionTitle>EXPERIENCE</SectionTitle>
       <SectionIntro>
         Throughout my career, I've worked on various projects, from building
@@ -39,7 +51,13 @@ const ExperienceSection: React.FC = () => {
           <Years>{exp.years}</Years>
           <Details>
             <Heading>
-              {exp.role} at {exp.company}
+              {exp.role} at{" "}
+              <Logo
+                src={exp.logo}
+                alt={exp.company}
+                $noPadding={exp.company === "Marble IT"}
+              />{" "}
+              {exp.company}
             </Heading>
             <Description>{exp.description}</Description>
           </Details>
@@ -52,7 +70,7 @@ const ExperienceSection: React.FC = () => {
 export default ExperienceSection;
 
 const SectionWrapper = styled.section`
-  margin-top: ${({ theme }) => theme.spacing.s40};
+  padding-top: ${({ theme }) => theme.spacing.s40};
 `;
 
 const SectionTitle = styled.p`
@@ -94,4 +112,14 @@ const Heading = styled.div`
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.fs16};
   margin: 0;
+`;
+
+const Logo = styled.img<{ $noPadding: boolean }>`
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  padding: ${({ $noPadding, theme }) => ($noPadding ? "0" : theme.spacing.s2)};
+  background-color: white;
+  border-radius: ${({ theme }) => theme.radius.r4};
+  margin-left: ${({ theme }) => theme.spacing.s4};
 `;
