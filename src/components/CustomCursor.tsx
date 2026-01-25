@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useCursor } from "../context/CursorContext"; // import the context
+import { isDesktopDevice } from "../utils/device";
 
 const CustomCursor: React.FC = () => {
   const { hidden } = useCursor(); // get global hidden state
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
+
+  // Check device once
+  const isDesktop = isDesktopDevice();
+  if (!isDesktop) return null;
 
   // track mouse position
   useEffect(() => {
@@ -91,8 +96,4 @@ const CursorDot = styled.div`
     height 0.15s ease,
     transform 0.15s ease;
   mix-blend-mode: difference;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none;
-  }
 `;

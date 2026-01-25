@@ -45,71 +45,7 @@ const App = () => {
             <HomeSection sectionRef={homeRef} />
 
             <StyledSection ref={experienceRef} id="experience">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                esse maxime porro sapiente iusto consectetur hic quas excepturi
-                nemo magni eius, minus aliquam aliquid, fuga accusantium
-                necessitatibus est dolore perferendis? Eos maiores iste,
-                similique optio labore illo sed, repudiandae reiciendis minus
-                totam ipsa sunt, debitis qui eius facere nesciunt consequatur?
-                Atque illum, perferendis harum repellat inventore, unde sequi
-                modi odio, itaque iure voluptas nostrum labore. Reiciendis
-                suscipit ab, nesciunt dolores neque sunt magnam commodi illum
-                modi alias voluptatum omnis voluptas temporibus necessitatibus
-                optio voluptatibus sit laborum sed nobis reprehenderit atque
-                facere corporis. Laudantium, soluta mollitia? Unde accusantium
-                assumenda dicta neque. Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Atque esse maxime porro sapiente iusto
-                consectetur hic quas excepturi nemo magni eius, minus aliquam
-                aliquid, fuga accusantium necessitatibus est dolore perferendis?
-                Eos maiores iste, similique optio labore illo sed, repudiandae
-                reiciendis minus totam ipsa sunt, debitis qui eius facere
-                nesciunt consequatur? Atque illum, perferendis harum repellat
-                inventore, unde sequi modi odio, itaque iure voluptas nostrum
-                labore. Reiciendis suscipit ab, nesciunt dolores neque sunt
-                magnam commodi illum modi alias voluptatum omnis voluptas
-                temporibus necessitatibus optio voluptatibus sit laborum sed
-                nobis reprehenderit atque facere corporis. Laudantium, soluta
-                mollitia? Unde accusantium assumenda dicta neque. Lorem ipsum
-                dolor sit amet consectetur, adipisicing elit. Atque esse maxime
-                porro sapiente iusto consectetur hic quas excepturi nemo magni
-                eius, minus aliquam aliquid, fuga accusantium necessitatibus est
-                dolore perferendis? Eos maiores iste, similique optio labore
-                illo sed, repudiandae reiciendis minus totam ipsa sunt, debitis
-                qui eius facere nesciunt consequatur? Atque illum, perferendis
-                harum repellat inventore, unde sequi modi odio, itaque iure
-                voluptas nostrum labore. Reiciendis suscipit ab, nesciunt
-                dolores neque sunt magnam commodi illum modi alias voluptatum
-                omnis voluptas temporibus necessitatibus optio voluptatibus sit
-                laborum sed nobis reprehenderit atque facere corporis.
-                Laudantium, soluta mollitia? Unde accusantium assumenda dicta
-                neque. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Atque esse maxime porro sapiente iusto consectetur hic quas
-                excepturi nemo magni eius, minus aliquam aliquid, fuga
-                accusantium necessitatibus est dolore perferendis? Eos maiores
-                iste, similique optio labore illo sed, repudiandae reiciendis
-                minus totam ipsa sunt, debitis qui eius facere nesciunt
-                consequatur? Atque illum, perferendis harum repellat inventore,
-                unde sequi modi odio, itaque iure voluptas nostrum labore.
-                Reiciendis suscipit ab, nesciunt dolores neque sunt magnam
-                commodi illum modi alias voluptatum omnis voluptas temporibus
-                necessitatibus optio voluptatibus sit laborum sed nobis
-                reprehenderit atque facere corporis. Laudantium, soluta
-                mollitia? Unde accusantium assumenda dicta neque. Lorem ipsum
-                dolor sit amet consectetur, adipisicing elit. Atque esse maxime
-                porro sapiente iusto consectetur hic quas excepturi nemo magni
-                eius, minus aliquam aliquid, fuga accusantium necessitatibus est
-                dolore perferendis? Eos maiores iste, similique optio labore
-                illo sed, repudiandae reiciendis minus totam ipsa sunt, debitis
-                qui eius facere nesciunt consequatur? Atque illum, perferendis
-                harum repellat inventore, unde sequi modi odio, itaque iure
-                voluptas nostrum labore. Reiciendis suscipit ab, nesciunt
-                dolores neque sunt magnam commodi illum modi alias voluptatum
-                omnis voluptas temporibus necessitatibus optio voluptatibus sit
-                laborum sed nobis reprehenderit atque facere corporis.
-                Laudantium, soluta mollitia? Unde accusantium assumenda dicta
-                neque.
-              </p>
+              <p>EXP</p>
             </StyledSection>
 
             <StyledSection ref={stackRef} id="stack">

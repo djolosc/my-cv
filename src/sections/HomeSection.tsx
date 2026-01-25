@@ -3,6 +3,8 @@ import ProfilePic from "../components/ProfilePic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Clock from "../components/Clock";
+import { useEffect, useState } from "react";
+import EmailRow from "../components/EmailRow";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -23,6 +25,24 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
       </NameRow>
 
       <p>Frontend Engineer</p>
+
+      <AboutRow>
+        <p>
+          Hey, I’m Djordje a software engineer at{" "}
+          <Companyname
+            href="https://clarivate.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Clarivate
+          </Companyname>{" "}
+          based in <span>Belgrade, Serbia 🇷🇸</span>. I specialize in building
+          polished web and mobile interfaces with a strong focus on frontend
+          architecture, performance, and great user experience.
+        </p>
+      </AboutRow>
+
+      <EmailRow />
     </StyledSection>
   );
 };
@@ -52,7 +72,15 @@ const NameRow = styled.div`
   margin-top: ${({ theme }) => theme.spacing.s16};
 `;
 
+const AboutRow = styled.div`
+  margin-top: ${({ theme }) => theme.spacing.s24};
+`;
+
 const Name = styled.p`
+  color: ${({ theme }) => theme.colors.white1};
+`;
+
+const Companyname = styled.a`
   color: ${({ theme }) => theme.colors.white1};
 `;
 

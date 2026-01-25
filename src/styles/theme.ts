@@ -5,16 +5,20 @@ export const theme = {
     black1: "#000000",
     black2: "#0D0D0D",
     black3: "#141414ff",
+    black4: "#3333334c",
+    black5: "#ffffff7",
 
     grey1: "#8f8f8f",
     grey2: "#ffffffc3",
     grey3: "#94a3b819",
+    grey4: "#ffffff59",
 
     green1: "#16bf5e",
 
     blue1: "#2f9df7",
   },
   fontSizes: {
+    fs10: "10px",
     fs12: "12px",
     fs14: "14px",
     fs16: "16px",
@@ -35,6 +39,7 @@ export const theme = {
   },
   radius: {
     r4: "4px",
+    r8: "8px",
     r12: "12px",
   },
   lspacing: {

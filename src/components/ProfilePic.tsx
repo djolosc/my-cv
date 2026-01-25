@@ -64,7 +64,7 @@ const SmallStatusCircle = styled.div`
 const StatusTooltip = styled.span`
   position: absolute;
   bottom: -12px;
-  background-color: rgba(51, 51, 51, 0.3);
+  background-color: ${({ theme }) => theme.colors.black4};
   font-family: "Geist Mono", monospace;
   font-size: ${({ theme }) => theme.fontSizes.fs12};
   letter-spacing: 1px;

@@ -48,17 +48,17 @@ const NavigationWrapper = styled.div`
   transform: translateX(-50%);
   z-index: 100;
 
-  background: rgba(255, 255, 255, 0.03); /* lower alpha for more transparency */
+  background: ${({ theme }) => theme.colors.black5};
   backdrop-filter: blur(6px); // frosted glass effect
   -webkit-backdrop-filter: blur(6px); // Safari support
 
   border-radius: 12px;
 
-  border: 1px solid rgba(255, 255, 255, 0.15); /* softer border */
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2); /* subtle inner highlight */
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 `;
 
 const NavContainer = styled.div`
@@ -91,7 +91,7 @@ const NavButton = styled.button`
 
   transition: all 0.25s ease;
   &:active {
-    color: rgba(255, 255, 255, 0.35); /* brighter on click */
-    transform: scale(1.1); /* slight “press in” */
+    color: ${({ theme }) => theme.colors.grey4};
+    transform: scale(1.1);
   }
 `;
