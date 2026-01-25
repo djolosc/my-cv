@@ -1,27 +1,37 @@
 import { useRef } from "react";
-import Header from "./components/Header";
 import styled, { ThemeProvider } from "styled-components";
 import CustomCursor from "./components/CustomCursor";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
 import HomeSection from "./sections/HomeSection";
 import { CursorProvider } from "./context/CursorContext";
+import {
+  faBolt,
+  faEnvelope,
+  faLayerGroup,
+  faSuitcase,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import Navigation from "./components/Navigation";
 
 const App = () => {
   const homeRef = useRef(null);
-  const aboutRef = useRef(null);
   const stackRef = useRef(null);
   const experienceRef = useRef(null);
   const personalRef = useRef(null);
   const contactRef = useRef(null);
 
   const sections = [
-    { id: "home", label: "Home", ref: homeRef },
-    { id: "about", label: "About", ref: aboutRef },
-    { id: "stack", label: "Stack", ref: stackRef },
-    { id: "experience", label: "Experience", ref: experienceRef },
-    { id: "personal", label: "Personal", ref: personalRef },
-    { id: "contact", label: "Contact", ref: contactRef },
+    { id: "home", label: "Home", ref: homeRef, icon: faUser },
+    {
+      id: "experience",
+      label: "Experience",
+      ref: experienceRef,
+      icon: faSuitcase,
+    },
+    { id: "stack", label: "Stack", ref: stackRef, icon: faLayerGroup },
+    { id: "personal", label: "Personal", ref: personalRef, icon: faBolt },
+    { id: "contact", label: "Contact", ref: contactRef, icon: faEnvelope },
   ];
 
   return (
@@ -31,20 +41,79 @@ const App = () => {
           <GlobalStyle />
           <CustomCursor />
 
-          <Header sections={sections} />
           <StyledContent>
             <HomeSection sectionRef={homeRef} />
 
-            <StyledSection ref={aboutRef} id="about">
-              <StyledH1>About</StyledH1>
+            <StyledSection ref={experienceRef} id="experience">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+                esse maxime porro sapiente iusto consectetur hic quas excepturi
+                nemo magni eius, minus aliquam aliquid, fuga accusantium
+                necessitatibus est dolore perferendis? Eos maiores iste,
+                similique optio labore illo sed, repudiandae reiciendis minus
+                totam ipsa sunt, debitis qui eius facere nesciunt consequatur?
+                Atque illum, perferendis harum repellat inventore, unde sequi
+                modi odio, itaque iure voluptas nostrum labore. Reiciendis
+                suscipit ab, nesciunt dolores neque sunt magnam commodi illum
+                modi alias voluptatum omnis voluptas temporibus necessitatibus
+                optio voluptatibus sit laborum sed nobis reprehenderit atque
+                facere corporis. Laudantium, soluta mollitia? Unde accusantium
+                assumenda dicta neque. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Atque esse maxime porro sapiente iusto
+                consectetur hic quas excepturi nemo magni eius, minus aliquam
+                aliquid, fuga accusantium necessitatibus est dolore perferendis?
+                Eos maiores iste, similique optio labore illo sed, repudiandae
+                reiciendis minus totam ipsa sunt, debitis qui eius facere
+                nesciunt consequatur? Atque illum, perferendis harum repellat
+                inventore, unde sequi modi odio, itaque iure voluptas nostrum
+                labore. Reiciendis suscipit ab, nesciunt dolores neque sunt
+                magnam commodi illum modi alias voluptatum omnis voluptas
+                temporibus necessitatibus optio voluptatibus sit laborum sed
+                nobis reprehenderit atque facere corporis. Laudantium, soluta
+                mollitia? Unde accusantium assumenda dicta neque. Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Atque esse maxime
+                porro sapiente iusto consectetur hic quas excepturi nemo magni
+                eius, minus aliquam aliquid, fuga accusantium necessitatibus est
+                dolore perferendis? Eos maiores iste, similique optio labore
+                illo sed, repudiandae reiciendis minus totam ipsa sunt, debitis
+                qui eius facere nesciunt consequatur? Atque illum, perferendis
+                harum repellat inventore, unde sequi modi odio, itaque iure
+                voluptas nostrum labore. Reiciendis suscipit ab, nesciunt
+                dolores neque sunt magnam commodi illum modi alias voluptatum
+                omnis voluptas temporibus necessitatibus optio voluptatibus sit
+                laborum sed nobis reprehenderit atque facere corporis.
+                Laudantium, soluta mollitia? Unde accusantium assumenda dicta
+                neque. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Atque esse maxime porro sapiente iusto consectetur hic quas
+                excepturi nemo magni eius, minus aliquam aliquid, fuga
+                accusantium necessitatibus est dolore perferendis? Eos maiores
+                iste, similique optio labore illo sed, repudiandae reiciendis
+                minus totam ipsa sunt, debitis qui eius facere nesciunt
+                consequatur? Atque illum, perferendis harum repellat inventore,
+                unde sequi modi odio, itaque iure voluptas nostrum labore.
+                Reiciendis suscipit ab, nesciunt dolores neque sunt magnam
+                commodi illum modi alias voluptatum omnis voluptas temporibus
+                necessitatibus optio voluptatibus sit laborum sed nobis
+                reprehenderit atque facere corporis. Laudantium, soluta
+                mollitia? Unde accusantium assumenda dicta neque. Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Atque esse maxime
+                porro sapiente iusto consectetur hic quas excepturi nemo magni
+                eius, minus aliquam aliquid, fuga accusantium necessitatibus est
+                dolore perferendis? Eos maiores iste, similique optio labore
+                illo sed, repudiandae reiciendis minus totam ipsa sunt, debitis
+                qui eius facere nesciunt consequatur? Atque illum, perferendis
+                harum repellat inventore, unde sequi modi odio, itaque iure
+                voluptas nostrum labore. Reiciendis suscipit ab, nesciunt
+                dolores neque sunt magnam commodi illum modi alias voluptatum
+                omnis voluptas temporibus necessitatibus optio voluptatibus sit
+                laborum sed nobis reprehenderit atque facere corporis.
+                Laudantium, soluta mollitia? Unde accusantium assumenda dicta
+                neque.
+              </p>
             </StyledSection>
 
             <StyledSection ref={stackRef} id="stack">
               <StyledH1>Stack</StyledH1>
-            </StyledSection>
-
-            <StyledSection ref={experienceRef} id="experience">
-              <StyledH1>Experience</StyledH1>
             </StyledSection>
 
             <StyledSection ref={personalRef} id="personal">
@@ -54,6 +123,7 @@ const App = () => {
               <StyledH1>Contact</StyledH1>
             </StyledSection>
           </StyledContent>
+          <Navigation sections={sections} />
         </StyledWrapper>
       </CursorProvider>
     </ThemeProvider>
@@ -69,6 +139,8 @@ const StyledWrapper = styled.div`
 const StyledContent = styled.main`
   max-width: 640px;
   margin: 0 auto;
+  padding: 0 ${({ theme }) => theme.spacing.s16};
+  position: relative;
 `;
 
 const StyledSection = styled.section`

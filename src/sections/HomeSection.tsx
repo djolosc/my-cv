@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ProfilePic from "../components/ProfilePic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import Clock from "../components/Clock";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -10,6 +11,10 @@ interface HomeSectionProps {
 const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
   return (
     <StyledSection ref={sectionRef} id="home">
+      <HeaderWrapper>
+        <EstText>EST. 1992</EstText>
+        <Clock />
+      </HeaderWrapper>
       <ProfilePic />
 
       <NameRow>
@@ -25,8 +30,19 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
 export default HomeSection;
 
 const StyledSection = styled.section`
-  padding-top: ${({ theme }) => theme.spacing.s40};
-  scroll-margin-top: 55px; /* sticky header offset */
+  padding-top: ${({ theme }) => theme.spacing.s20};
+`;
+
+const EstText = styled.p`
+  font-family: "Geist Mono", monospace;
+  font-size: ${({ theme }) => theme.fontSizes.fs12};
+`;
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: ${({ theme }) => theme.spacing.s40};
 `;
 
 const NameRow = styled.div`

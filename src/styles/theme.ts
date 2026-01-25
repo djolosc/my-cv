@@ -18,6 +18,7 @@ export const theme = {
     fs12: "12px",
     fs14: "14px",
     fs16: "16px",
+    fs18: "18px",
   },
   spacing: {
     s2: "2px",

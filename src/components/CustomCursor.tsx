@@ -50,8 +50,8 @@ const CustomCursor: React.FC = () => {
 
         // move 70% toward element center
         setPos((prev) => ({
-          x: prev.x + (targetX - prev.x) * 0.7,
-          y: prev.y + (targetY - prev.y) * 0.7,
+          x: prev.x + (targetX - prev.x) * 0.5,
+          y: prev.y + (targetY - prev.y) * 0.5,
         }));
       }
     };
@@ -66,7 +66,7 @@ const CustomCursor: React.FC = () => {
         left: pos.x,
         top: pos.y,
         transform: `translate(-50%, -50%) scale(${
-          hidden ? 0 : hovering ? 1 : 0.45
+          hidden ? 0 : hovering ? 1 : 0.4
         })`,
       }}
     />
@@ -79,8 +79,8 @@ const CursorDot = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.grey2};
   pointer-events: none;
@@ -91,4 +91,8 @@ const CursorDot = styled.div`
     height 0.15s ease,
     transform 0.15s ease;
   mix-blend-mode: difference;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
