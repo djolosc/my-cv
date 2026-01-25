@@ -13,6 +13,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./components/Navigation";
+import ExperienceSection from "./sections/ExperienceSection";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -43,10 +44,7 @@ const App = () => {
 
           <StyledContent>
             <HomeSection sectionRef={homeRef} />
-
-            <StyledSection ref={experienceRef} id="experience">
-              <p>EXP</p>
-            </StyledSection>
+            <ExperienceSection sectionRef={experienceRef} />
 
             <StyledSection ref={stackRef} id="stack">
               <StyledH1>Stack</StyledH1>

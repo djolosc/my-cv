@@ -3,12 +3,13 @@ import ProfilePic from "../components/ProfilePic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Clock from "../components/Clock";
-import { useEffect, useState } from "react";
 import EmailRow from "../components/EmailRow";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
 }
+
+const CURRENT_COMPANY_URL = "https://clarivate.com";
 
 const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
   return (
@@ -30,7 +31,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
         <p>
           Hey, I’m Djordje a software engineer at{" "}
           <Companyname
-            href="https://clarivate.com"
+            href={CURRENT_COMPANY_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
