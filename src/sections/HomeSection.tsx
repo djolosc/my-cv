@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Clock from "../components/Clock";
 import EmailRow from "../components/EmailRow";
+import CompanyName from "../components/CompanyName";
+import ClarivateLogo from "../assets/clrvt.svg";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -29,17 +31,17 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
 
       <AboutRow>
         <p>
-          Hey, I’m Djordje a software engineer at{" "}
-          <Companyname
+          Hey, I’m Djordje, a software engineer at{" "}
+          <a
             href={CURRENT_COMPANY_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Clarivate
-          </Companyname>{" "}
-          based in <span>Belgrade, Serbia 🇷🇸</span>. I specialize in building
-          polished web and mobile interfaces with a strong focus on frontend
-          architecture, performance, and great user experience.
+            <CompanyName logo={ClarivateLogo} company="Clarivate" />
+          </a>{" "}
+          , currently, based in <span>Belgrade, Serbia 🇷🇸</span>. I specialize
+          in building polished web and mobile interfaces with a strong focus on
+          frontend architecture, performance, and great user experience.
         </p>
       </AboutRow>
 
@@ -69,7 +71,7 @@ const HeaderWrapper = styled.div`
 const NameRow = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }) => theme.spacing.s4};
+  gap: ${({ theme }) => theme.spacing.s2};
   margin-top: ${({ theme }) => theme.spacing.s16};
 `;
 
@@ -78,10 +80,6 @@ const AboutRow = styled.div`
 `;
 
 const Name = styled.p`
-  color: ${({ theme }) => theme.colors.white1};
-`;
-
-const Companyname = styled.a`
   color: ${({ theme }) => theme.colors.white1};
 `;
 

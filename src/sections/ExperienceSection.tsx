@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ClarivateLogo from "../assets/clrvt.svg";
 import IvcLogo from "../assets/ivc.svg";
 import MarbleLogo from "../assets/marble.svg";
+import CompanyName from "../components/CompanyName";
 
 const experienceData = [
   {
@@ -51,13 +52,12 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
           <Years>{exp.years}</Years>
           <Details>
             <Heading>
-              {exp.role} at{" "}
-              <Logo
-                src={exp.logo}
-                alt={exp.company}
-                $noPadding={exp.company === "Marble IT"}
-              />{" "}
-              {exp.company}
+              <p>{exp.role} at </p>
+              <CompanyName
+                logo={exp.logo}
+                company={exp.company}
+                noPadding={exp.company === "Marble IT"}
+              />
             </Heading>
             <Description>{exp.description}</Description>
           </Details>
@@ -105,21 +105,14 @@ const Details = styled.div`
   flex: 1;
 `;
 
-const Heading = styled.div`
+const Heading = styled.span`
   color: ${({ theme }) => theme.colors.white1};
+  display: flex;
+  gap: 4px;
+  align-items: center;
 `;
 
 const Description = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.fs16};
   margin: 0;
-`;
-
-const Logo = styled.img<{ $noPadding: boolean }>`
-  vertical-align: middle;
-  height: 20px;
-  width: 20px;
-  padding: ${({ $noPadding, theme }) => ($noPadding ? "0" : theme.spacing.s2)};
-  background-color: white;
-  border-radius: ${({ theme }) => theme.radius.r4};
-  margin-left: ${({ theme }) => theme.spacing.s4};
 `;

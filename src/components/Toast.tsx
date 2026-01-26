@@ -34,6 +34,7 @@ const ToastWrapper = styled.div<{ $visible: boolean }>`
   left: 50%;
   bottom: 76px;
   font-family: "Geist Mono", monospace;
+  white-space: nowrap;
   transform: translateX(-50%)
     translateY(${({ $visible }) => ($visible ? "0" : "20px")});
   padding: ${({ theme }) => `${theme.spacing.s4} ${theme.spacing.s12}`};
@@ -45,6 +46,7 @@ const ToastWrapper = styled.div<{ $visible: boolean }>`
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   opacity: ${({ $visible }) => ($visible ? 1 : 0)};
   pointer-events: none;
+  text-align: center;
 
   transition:
     opacity 0.25s ease,
