@@ -81,13 +81,12 @@ const SectionTitle = styled.p`
 const SectionIntro = styled.p`
   margin-top: ${({ theme }) => theme.spacing.s16};
   font-size: ${({ theme }) => theme.fontSizes.fs16};
-  margin-bottom: ${({ theme }) => theme.spacing.s32};
 `;
 
 const ExperienceRow = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacing.s40};
-  margin-bottom: ${({ theme }) => theme.spacing.s32};
+  margin-top: ${({ theme }) => theme.spacing.s32};
 
   @media (max-width: 768px) {
     flex-direction: column;

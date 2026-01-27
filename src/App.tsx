@@ -15,6 +15,7 @@ import {
 import Navigation from "./components/Navigation";
 import ExperienceSection from "./sections/ExperienceSection";
 import Signature from "./components/Signature";
+import StackSection from "./sections/StackSection";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -46,10 +47,7 @@ const App = () => {
           <StyledContent>
             <HomeSection sectionRef={homeRef} />
             <ExperienceSection sectionRef={experienceRef} />
-
-            <StyledSection ref={stackRef} id="stack">
-              <StyledH1>Stack</StyledH1>
-            </StyledSection>
+            <StackSection sectionRef={stackRef} />
 
             <StyledSection ref={personalRef} id="personal">
               <StyledH1>Personal</StyledH1>
