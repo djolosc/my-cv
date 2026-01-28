@@ -3,7 +3,12 @@ import styled, { ThemeProvider } from "styled-components";
 import CustomCursor from "./components/CustomCursor";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
-import HomeSection from "./sections/HomeSection";
+import {
+  HomeSection,
+  ExperienceSection,
+  StackSection,
+  PersonalSection,
+} from "./components/sections";
 import { CursorProvider } from "./context/CursorContext";
 import {
   faBolt,
@@ -13,9 +18,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./components/Navigation";
-import ExperienceSection from "./sections/ExperienceSection";
 import Signature from "./components/Signature";
-import StackSection from "./sections/StackSection";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -48,10 +51,8 @@ const App = () => {
             <HomeSection sectionRef={homeRef} />
             <ExperienceSection sectionRef={experienceRef} />
             <StackSection sectionRef={stackRef} />
+            <PersonalSection sectionRef={personalRef} />
 
-            <StyledSection ref={personalRef} id="personal">
-              <StyledH1>Personal</StyledH1>
-            </StyledSection>
             <StyledSection ref={contactRef} id="contact">
               <StyledH1>Contact</StyledH1>
             </StyledSection>

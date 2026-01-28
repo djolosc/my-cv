@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import ProfilePic from "../components/ProfilePic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import Clock from "../components/Clock";
-import EmailRow from "../components/EmailRow";
-import CompanyName from "../components/CompanyName";
-import ClarivateLogo from "../assets/clrvt.svg";
+
+import SectionLayout from "./SectionLayout";
+import ProfilePic from "../ProfilePic";
+import Clock from "../Clock";
+import EmailRow from "../EmailRow";
+import CompanyName from "../CompanyName";
+import ClarivateLogo from "../../assets/clrvt.svg";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -15,7 +17,7 @@ const CURRENT_COMPANY_URL = "https://clarivate.com";
 
 const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
   return (
-    <StyledSection ref={sectionRef} id="home">
+    <SectionLayout sectionRef={sectionRef} id="home">
       <HeaderWrapper>
         <EstText>EST. 1992</EstText>
         <Clock />
@@ -46,15 +48,11 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
       </AboutRow>
 
       <EmailRow />
-    </StyledSection>
+    </SectionLayout>
   );
 };
 
 export default HomeSection;
-
-const StyledSection = styled.section`
-  padding-top: ${({ theme }) => theme.spacing.s20};
-`;
 
 const EstText = styled.p`
   font-family: "Geist Mono", monospace;

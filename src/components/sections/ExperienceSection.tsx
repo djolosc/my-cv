@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import ClarivateLogo from "../assets/clrvt.svg";
-import IvcLogo from "../assets/ivc.svg";
-import MarbleLogo from "../assets/marble.svg";
-import CompanyName from "../components/CompanyName";
+import ClarivateLogo from "../../assets/clrvt.svg";
+import IvcLogo from "../../assets/ivc.svg";
+import MarbleLogo from "../../assets/marble.svg";
+import CompanyName from "../CompanyName";
+import SectionLayout from "./SectionLayout";
 
 const experienceData = [
   {
@@ -39,8 +40,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   sectionRef,
 }) => {
   return (
-    <SectionWrapper ref={sectionRef} id="experience">
-      <SectionTitle>EXPERIENCE</SectionTitle>
+    <SectionLayout sectionRef={sectionRef} id="experience" title="EXPERIENCE">
       <SectionIntro>
         Throughout my career, I've worked on various projects, from building
         scalable systems to designing user-friendly interfaces. Here's a brief
@@ -63,20 +63,11 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
           </Details>
         </ExperienceRow>
       ))}
-    </SectionWrapper>
+    </SectionLayout>
   );
 };
 
 export default ExperienceSection;
-
-const SectionWrapper = styled.section`
-  padding-top: ${({ theme }) => theme.spacing.s40};
-`;
-
-const SectionTitle = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.fs12};
-  font-family: "Geist Mono", monospace;
-`;
 
 const SectionIntro = styled.p`
   margin-top: ${({ theme }) => theme.spacing.s16};
