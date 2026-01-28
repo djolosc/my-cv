@@ -57,5 +57,6 @@ const StackSection: FC<StackSectionProps> = ({ sectionRef }) => {
 
 export default StackSection;
 const StyledMarquee = styled(Marquee)`
-  height: 125px;
+  height: 90px;
+  align-items: flex-start;
 `;

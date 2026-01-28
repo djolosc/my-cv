@@ -9,7 +9,12 @@ interface PersonalSectionProps {
 
 const PersonalSection: FC<PersonalSectionProps> = ({ sectionRef }) => {
   return (
-    <SectionLayout sectionRef={sectionRef} title="PERSONAL" id="personal">
+    <SectionLayout
+      sectionRef={sectionRef}
+      title="PERSONAL"
+      id="personal"
+      paddingTop={20}
+    >
       <StyledText>
         In my free time, you’ll usually find me traveling, reading, or playing
         board games with friends. Between coding sessions, I like to train for

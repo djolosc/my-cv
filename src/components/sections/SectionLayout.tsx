@@ -6,6 +6,7 @@ interface SectionLayoutProps {
   title?: string;
   children?: ReactNode;
   id?: string;
+  paddingTop?: number;
 }
 
 const SectionLayout: FC<SectionLayoutProps> = ({
@@ -13,9 +14,10 @@ const SectionLayout: FC<SectionLayoutProps> = ({
   title,
   children,
   id,
+  paddingTop,
 }) => {
   return (
-    <SectionWrapper ref={sectionRef} id={id} $noTitle={!title}>
+    <SectionWrapper ref={sectionRef} id={id} $paddingTop={paddingTop}>
       {title && <SectionTitle>{title}</SectionTitle>}
       {children}
     </SectionWrapper>
@@ -24,9 +26,9 @@ const SectionLayout: FC<SectionLayoutProps> = ({
 
 export default SectionLayout;
 
-const SectionWrapper = styled.section<{ $noTitle: boolean }>`
-  padding-top: ${({ theme, $noTitle }) =>
-    $noTitle ? theme.spacing.s20 : theme.spacing.s40};
+const SectionWrapper = styled.section<{ $paddingTop?: number }>`
+  padding-top: ${({ theme, $paddingTop }) =>
+    $paddingTop ? `${$paddingTop}px` : theme.spacing.s40};
 `;
 
 const SectionTitle = styled.p`

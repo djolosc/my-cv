@@ -17,7 +17,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
   const CURRENT_COMPANY_URL = "https://clarivate.com";
 
   return (
-    <SectionLayout sectionRef={sectionRef} id="home">
+    <SectionLayout sectionRef={sectionRef} id="home" paddingTop={20}>
       <HeaderWrapper>
         <EstText>EST. 1992</EstText>
         <Clock />
