@@ -9,6 +9,7 @@ export const theme = {
     black5: "#ffffff7",
     black6: "#262626",
     black7: "#0b0b0b",
+    black8: "#1f1f1f",
 
     grey1: "#8f8f8f",
     grey2: "#ffffffc3",
@@ -41,6 +42,7 @@ export const theme = {
   },
   radius: {
     r4: "4px",
+    r6: "6px",
     r8: "8px",
     r12: "12px",
   },
@@ -50,6 +52,7 @@ export const theme = {
   },
   lheight: {
     lh16: "16px",
+    lh18: "18px",
     lh24: "24px",
   },
   breakpoints: {

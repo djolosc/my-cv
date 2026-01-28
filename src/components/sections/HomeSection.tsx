@@ -13,9 +13,9 @@ interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
 }
 
-const CURRENT_COMPANY_URL = "https://clarivate.com";
-
 const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
+  const CURRENT_COMPANY_URL = "https://clarivate.com";
+
   return (
     <SectionLayout sectionRef={sectionRef} id="home">
       <HeaderWrapper>

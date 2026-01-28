@@ -5,33 +5,6 @@ import MarbleLogo from "../../assets/marble.svg";
 import CompanyName from "../CompanyName";
 import SectionLayout from "./SectionLayout";
 
-const experienceData = [
-  {
-    years: "07/2024 - PRESENT",
-    role: "Senior Frontend Engineer",
-    company: "Clarivate",
-    description:
-      "Build a user-friendly web app that helps professionals manage their intellectual properties efficiently. Design interactive dashboards with real-time updates to make tracking and monitoring simple for users.",
-    logo: ClarivateLogo,
-  },
-  {
-    years: "11/2021 - 07/2024",
-    role: "Frontend Engineer",
-    company: "IVC Evidensia",
-    description:
-      "Work on a mobile app that supports veterinary clinics worldwide. In addition, develop a web app that streamlines daily tasks and makes workflows more intuitive and efficient for users.",
-    logo: IvcLogo,
-  },
-  {
-    years: "04/2021 - 11/2021",
-    role: "Frontend Engineer",
-    company: "Marble IT",
-    description:
-      "Develop a mobile app that helps users reconnect with contacts after losing their phone, ensuring a seamless and reliable experience.",
-    logo: MarbleLogo,
-  },
-];
-
 interface ExperienceSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
 }
@@ -39,6 +12,33 @@ interface ExperienceSectionProps {
 const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   sectionRef,
 }) => {
+  const experienceData = [
+    {
+      years: "07/2024 - PRESENT",
+      role: "Senior Frontend Engineer",
+      company: "Clarivate",
+      description:
+        "Build a user-friendly web app that helps professionals manage their intellectual properties efficiently. Design interactive dashboards with real-time updates to make tracking and monitoring simple for users.",
+      logo: ClarivateLogo,
+    },
+    {
+      years: "11/2021 - 07/2024",
+      role: "Frontend Engineer",
+      company: "IVC Evidensia",
+      description:
+        "Work on a mobile app that supports veterinary clinics worldwide. In addition, develop a web app that streamlines daily tasks and makes workflows more intuitive and efficient for users.",
+      logo: IvcLogo,
+    },
+    {
+      years: "04/2021 - 11/2021",
+      role: "Frontend Engineer",
+      company: "Marble IT",
+      description:
+        "Develop a mobile app that helps users reconnect with contacts after losing their phone, ensuring a seamless and reliable experience.",
+      logo: MarbleLogo,
+    },
+  ];
+
   return (
     <SectionLayout sectionRef={sectionRef} id="experience" title="EXPERIENCE">
       <SectionIntro>

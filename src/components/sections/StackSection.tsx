@@ -41,7 +41,7 @@ const logos = [
 const StackSection: FC<StackSectionProps> = ({ sectionRef }) => {
   return (
     <SectionLayout sectionRef={sectionRef} id="stack" title="STACK">
-      <StyledMarquee speed={30} gradient={false} pauseOnHover pauseOnClick>
+      <StyledMarquee speed={20} gradient={false}>
         {logos.map((logo) => (
           <Icon
             key={logo.name}
