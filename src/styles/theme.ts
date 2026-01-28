@@ -8,6 +8,7 @@ export const theme = {
     black4: "#3333334c",
     black5: "#ffffff7",
     black6: "#262626",
+    black7: "#0b0b0b",
 
     grey1: "#8f8f8f",
     grey2: "#ffffffc3",
