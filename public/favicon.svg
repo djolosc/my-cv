@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="black"/>
+  <g fill="white">
+    <!-- D (slimmer) -->
+    <path d="M6 16h12c7 0 10 6 10 16s-3 16-10 16H6V16zm8 6v20h3c4 0 5-4 5-10s-1-10-5-10h-3z"/>
+    <!-- J (slimmer) -->
+    <path d="M34 16h6v22c0 5-3 9-8 9h-5v-5h3c2 0 3-2 3-4V16z"/>
+    <!-- S (slimmer) -->
+    <path d="M58 22c0-3-3-5-7-5s-7 2-7 5c0 9 12 6 12 13 0 2-2 3-5 3s-5-1-5-3v-2h-5v2c0 5 5 9 11 9s11-3 11-9c0-11-12-7-12-13z"/>
+  </g>
+</svg>
