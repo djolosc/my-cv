@@ -8,6 +8,7 @@ import {
   ExperienceSection,
   StackSection,
   PersonalSection,
+  ContactSection,
 } from "./components/sections";
 import { CursorProvider } from "./context/CursorContext";
 import {
@@ -52,10 +53,8 @@ const App = () => {
             <ExperienceSection sectionRef={experienceRef} />
             <StackSection sectionRef={stackRef} />
             <PersonalSection sectionRef={personalRef} />
+            <ContactSection sectionRef={personalRef} />
 
-            <StyledSection ref={contactRef} id="contact">
-              <StyledH1>Contact</StyledH1>
-            </StyledSection>
             {/* <Signature /> */}
           </StyledContent>
 
@@ -77,17 +76,4 @@ const StyledContent = styled.main`
   margin: 0 auto;
   padding: 0 ${({ theme }) => theme.spacing.s16};
   position: relative;
-`;
-
-const StyledSection = styled.section`
-  min-height: 100vh;
-  padding: 6rem 1.5rem;
-  scroll-margin-top: 55px; /* sticky header offset */
-`;
-
-const StyledH1 = styled.h1`
-  color: white;
-  font-size: 4rem;
-  text-align: center;
-  margin-top: 2rem;
 `;
