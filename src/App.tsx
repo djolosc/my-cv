@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { CustomCursor, Navigation } from "@/shared/components";
 import Signature from "./shared/components/Signature";
 
-import { GlobalStyle } from "./styles/GlobalStyle";
-import { theme } from "./styles/theme";
+import { GlobalStyle } from "@/styles/GlobalStyle";
+import { theme } from "@/styles/theme";
 import {
   HomeSection,
   ExperienceSection,
