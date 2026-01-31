@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styled from "styled-components";
-import SectionLayout from "./SectionLayout";
-import SpotifyTrackCard from "../SpotifyTrackCard";
+import SectionLayout from "@/shared/layout/SectionLayout";
+import SpotifyTrackCard from "../components/SpotifyTrackCard";
 
 interface PersonalSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

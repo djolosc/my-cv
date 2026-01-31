@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-import SectionLayout from "./SectionLayout";
-import ProfilePic from "../ProfilePic";
-import Clock from "../Clock";
-import EmailRow from "../EmailRow";
-import CompanyName from "../CompanyName";
-import ClarivateLogo from "../../assets/clrvt.svg";
+import SectionLayout from "@/shared/layout/SectionLayout";
+import ProfilePic from "../components/ProfilePic";
+import Clock from "../components/Clock";
+import EmailRow from "../components/EmailRow";
+import { CompanyName } from "@/shared/components";
+
+import ClarivateLogo from "@/assets/logos/clrvt.svg";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

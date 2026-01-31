@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useCursor } from "../context/CursorContext"; // import the context
-import { isDesktopDevice } from "../utils/device";
+import { isDesktopDevice } from "@/utils/device";
 
 const CustomCursor: React.FC = () => {
   const { hidden } = useCursor(); // get global hidden state

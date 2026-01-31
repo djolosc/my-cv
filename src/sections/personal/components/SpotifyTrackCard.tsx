@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import AlbumArt from "../assets/album-art.png";
-import Spotifylogo from "../assets/spotify.svg";
+import AlbumArt from "@/assets/images/album-art.png";
+import Spotifylogo from "@/assets/logos/spotify.svg";
 
 const SpotifyTrackCard = () => {
   const track = {

@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import styled from "styled-components";
-import SectionLayout from "./SectionLayout";
+
+import SectionLayout from "@/shared/layout/SectionLayout";
 
 interface ContactSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

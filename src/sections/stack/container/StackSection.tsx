@@ -2,21 +2,22 @@ import { type FC } from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
 
-import FigmaSvg from "../../assets/Figma.svg";
-import ChatGPTSvg from "../../assets/ChatGPT.svg";
-import GitHubSvg from "../../assets/GitHub.svg";
-import JavaScriptSvg from "../../assets/JavaScript.svg";
-import JestSvg from "../../assets/Jest.svg";
-import NodeSvg from "../../assets/Node.js.svg";
-import ReactSvg from "../../assets/React.svg";
-import ReduxSvg from "../../assets/Redux.svg";
-import TypeScriptSvg from "../../assets/TypeScript.svg";
-import VuetifySvg from "../../assets/Vuetify.svg";
-import ViteSvg from "../../assets/Vite.svg";
-import VueSvg from "../../assets/Vue.svg";
-import YarnSvg from "../../assets/Yarn.svg";
-import Icon from "../Icon";
-import SectionLayout from "./SectionLayout";
+import FigmaSvg from "@/assets/logos/Figma.svg";
+import ChatGPTSvg from "@/assets/logos/ChatGPT.svg";
+import GitHubSvg from "@/assets/logos/GitHub.svg";
+import JavaScriptSvg from "@/assets/logos/JavaScript.svg";
+import JestSvg from "@/assets/logos/Jest.svg";
+import NodeSvg from "@/assets/logos/Node.js.svg";
+import ReactSvg from "@/assets/logos/React.svg";
+import ReduxSvg from "@/assets/logos/Redux.svg";
+import TypeScriptSvg from "@/assets/logos/TypeScript.svg";
+import VuetifySvg from "@/assets/logos/Vuetify.svg";
+import ViteSvg from "@/assets/logos/Vite.svg";
+import VueSvg from "@/assets/logos/Vue.svg";
+import YarnSvg from "@/assets/logos/Yarn.svg";
+
+import Icon from "../components/Icon";
+import SectionLayout from "@/shared/layout/SectionLayout";
 
 interface StackSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

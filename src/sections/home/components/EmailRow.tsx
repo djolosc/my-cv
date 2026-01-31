@@ -1,9 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
-import Toast from "./Toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
-import { isDesktopDevice } from "../utils/device";
+
+import { Toast } from "@/shared/components";
+import { isDesktopDevice } from "@/utils/device";
 
 const EMAIL = "djsimovic@gmail.com";
 

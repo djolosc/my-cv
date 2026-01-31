@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import ClarivateLogo from "../../assets/clrvt.svg";
-import IvcLogo from "../../assets/ivc.svg";
-import MarbleLogo from "../../assets/marble.svg";
-import CompanyName from "../CompanyName";
-import SectionLayout from "./SectionLayout";
+
+import ClarivateLogo from "@/assets/logos/clrvt.svg";
+import IvcLogo from "@/assets/logos/ivc.svg";
+import MarbleLogo from "@/assets/logos/marble.svg";
+
+import { CompanyName } from "@/shared/components";
+import SectionLayout from "@/shared/layout/SectionLayout";
 
 interface ExperienceSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

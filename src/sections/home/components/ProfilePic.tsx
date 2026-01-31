@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import profileImg from "../assets/profile-picture.png";
-import { HoverHideCursor } from "./HoverHideCursor";
+import profileImg from "@/assets/images/profile-picture.png";
+
+import { HoverHideCursor } from "@/shared/components";
 
 const ProfilePic = () => {
   return (

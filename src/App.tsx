@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import CustomCursor from "./components/CustomCursor";
+import { CustomCursor, Navigation } from "@/shared/components";
+import Signature from "./shared/components/Signature";
+
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { theme } from "./styles/theme";
 import {
@@ -9,8 +11,8 @@ import {
   StackSection,
   PersonalSection,
   ContactSection,
-} from "./components/sections";
-import { CursorProvider } from "./context/CursorContext";
+} from "@/sections";
+import { CursorProvider } from "@/shared/context/CursorContext";
 import {
   faBolt,
   faEnvelope,
@@ -18,8 +20,6 @@ import {
   faSuitcase,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import Navigation from "./components/Navigation";
-import Signature from "./components/Signature";
 
 const App = () => {
   const homeRef = useRef(null);

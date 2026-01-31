@@ -5,7 +5,7 @@ interface Props {
   children: ReactNode;
 }
 
-export const HoverHideCursor: React.FC<Props> = ({ children }) => {
+const HoverHideCursor: React.FC<Props> = ({ children }) => {
   const { setHidden } = useCursor();
 
   return (
@@ -17,3 +17,5 @@ export const HoverHideCursor: React.FC<Props> = ({ children }) => {
     </div>
   );
 };
+
+export default HoverHideCursor;
