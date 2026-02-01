@@ -8,14 +8,19 @@ import Photo3 from "@/assets/images/pphoto3.avif";
 import Photo4 from "@/assets/images/pphoto4.avif";
 
 const PhotoStack = () => {
-  const images = [Photo1, Photo2, Photo3, Photo4];
+  const images = [
+    { img: Photo1, alt: "photo1" },
+    { img: Photo2, alt: "photo2" },
+    { img: Photo3, alt: "photo3" },
+    { img: Photo4, alt: "photo4" },
+  ];
 
   return (
     <>
       <StackWrapper>
         {images.map((src, i) => (
           <PhotoCard key={i} $index={i}>
-            <StyledImg src={src} alt="" />
+            <StyledImg src={src.img} alt={src.alt} />
           </PhotoCard>
         ))}
       </StackWrapper>
@@ -66,7 +71,7 @@ export const PhotoCard = styled.div<{ $index: number }>`
   will-change: transform;
 
   ${({ $index }) => {
-    const offsetsLeft = [-30, 130, 290, 450];
+    const offsetsLeft = [-36, 128, 290, 450];
     const offsetsBottom = [0, 15, 0, 10];
     const rotations = [-3, 2, -4, 4];
     const z = [1, 2, 3, 4];
