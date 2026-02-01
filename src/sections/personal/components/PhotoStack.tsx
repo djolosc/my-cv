@@ -35,7 +35,7 @@ export const StackWrapper = styled.section`
   justify-content: center;
   align-items: center;
   overflow: visible;
-  margin-top: ${({ theme }) => theme.spacing.s32};
+  margin-top: ${({ theme }) => theme.spacing.s40};
 
   @media (max-width: 768px) {
     grid-template-rows: repeat(2, min-content);
@@ -47,6 +47,7 @@ export const StackWrapper = styled.section`
     height: min-content;
     padding: 0;
     display: grid;
+    margin-top: ${({ theme }) => theme.spacing.s32};
   }
 `;
 
