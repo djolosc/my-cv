@@ -2,6 +2,7 @@ import { type FC } from "react";
 import styled from "styled-components";
 import SectionLayout from "@/shared/layout/SectionLayout";
 import SpotifyTrackCard from "../components/SpotifyTrackCard";
+import PhotoStack from "../components/PhotoStack";
 
 interface PersonalSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -21,6 +22,7 @@ const PersonalSection: FC<PersonalSectionProps> = ({ sectionRef }) => {
         my next half-marathon while listening to music that keeps me going.
       </StyledText>
       <SpotifyTrackCard />
+      <PhotoStack />
     </SectionLayout>
   );
 };
