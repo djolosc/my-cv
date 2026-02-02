@@ -7,6 +7,7 @@ interface SectionLayoutProps {
   children?: ReactNode;
   id?: string;
   paddingTop?: number;
+  isNarrow?: boolean;
 }
 
 const SectionLayout: FC<SectionLayoutProps> = ({
@@ -15,9 +16,15 @@ const SectionLayout: FC<SectionLayoutProps> = ({
   children,
   id,
   paddingTop,
+  isNarrow,
 }) => {
   return (
-    <SectionWrapper ref={sectionRef} id={id} $paddingTop={paddingTop}>
+    <SectionWrapper
+      ref={sectionRef}
+      id={id}
+      $paddingTop={paddingTop}
+      $isNarrow={isNarrow}
+    >
       {title && <SectionTitle>{title}</SectionTitle>}
       {children}
     </SectionWrapper>
@@ -26,9 +33,22 @@ const SectionLayout: FC<SectionLayoutProps> = ({
 
 export default SectionLayout;
 
-const SectionWrapper = styled.section<{ $paddingTop?: number }>`
+const SectionWrapper = styled.section<{
+  $paddingTop?: number;
+  $isNarrow?: boolean;
+}>`
+  ${({ $isNarrow, theme }) =>
+    !$isNarrow &&
+    `
+      max-width: 640px;
+      padding: 0 ${theme.spacing.s16};
+    `}
+
   padding-top: ${({ theme, $paddingTop }) =>
     $paddingTop ? `${$paddingTop}px` : theme.spacing.s40};
+
+  margin: 0 auto;
+  position: relative;
 `;
 
 const SectionTitle = styled.p`

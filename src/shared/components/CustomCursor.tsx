@@ -52,12 +52,6 @@ const CustomCursor: React.FC = () => {
         const rect = target.getBoundingClientRect();
         const targetX = rect.left + rect.width / 2;
         const targetY = rect.top + rect.height / 2;
-
-        // move 70% toward element center
-        setPos((prev) => ({
-          x: prev.x + (targetX - prev.x) * 0.5,
-          y: prev.y + (targetY - prev.y) * 0.5,
-        }));
       }
     };
 
