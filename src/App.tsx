@@ -47,15 +47,15 @@ const App = () => {
           <GlobalStyle />
           <CustomCursor />
 
-          <main>
+          <StyledMain>
             <HomeSection sectionRef={homeRef} />
             <ExperienceSection sectionRef={experienceRef} />
             <StackSection sectionRef={stackRef} />
             <PersonalSection sectionRef={personalRef} />
             <ContactSection sectionRef={contactRef} />
-          </main>
 
-          <Navigation sections={sections} />
+            <Navigation sections={sections} />
+          </StyledMain>
         </StyledWrapper>
       </CursorProvider>
     </ThemeProvider>
@@ -66,4 +66,8 @@ export default App;
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.black2};
+`;
+
+const StyledMain = styled.main`
+  padding-bottom: ${({ theme }) => theme.spacing.s96};
 `;
