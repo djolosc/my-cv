@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { CustomCursor, Navigation } from "@/shared/components";
-import Signature from "./shared/components/Signature";
 
 import { GlobalStyle } from "@/styles/GlobalStyle";
 import { theme } from "@/styles/theme";
@@ -54,7 +53,6 @@ const App = () => {
             <StackSection sectionRef={stackRef} />
             <PersonalSection sectionRef={personalRef} />
             <ContactSection sectionRef={contactRef} />
-            {/* <Signature /> */}
           </main>
 
           <Navigation sections={sections} />
