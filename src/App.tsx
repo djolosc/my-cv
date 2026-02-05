@@ -48,7 +48,7 @@ const App = () => {
           <GlobalStyle />
           <CustomCursor />
 
-          <StyledMain>
+          <main>
             <HomeSection sectionRef={homeRef} />
             <ExperienceSection sectionRef={experienceRef} />
             <StackSection sectionRef={stackRef} />
@@ -57,7 +57,7 @@ const App = () => {
             <Footer />
 
             <Navigation sections={sections} />
-          </StyledMain>
+          </main>
         </StyledWrapper>
       </CursorProvider>
     </ThemeProvider>
@@ -68,8 +68,4 @@ export default App;
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.black2};
-`;
-
-const StyledMain = styled.main`
-  /* padding-bottom: ${({ theme }) => theme.spacing.s96}; */
 `;
