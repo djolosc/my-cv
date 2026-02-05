@@ -43,7 +43,7 @@ export default Navigation;
 
 const NavigationWrapper = styled.div`
   position: fixed;
-  bottom: calc(env(safe-area-inset-bottom) + 16px);
+  bottom: calc(env(safe-area-inset-bottom) + 8px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
