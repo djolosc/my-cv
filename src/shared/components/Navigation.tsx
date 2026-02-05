@@ -52,9 +52,9 @@ const NavigationWrapper = styled.div`
   backdrop-filter: blur(6px); // frosted glass effect
   -webkit-backdrop-filter: blur(6px); // Safari support
 
-  border-radius: 12px;
+  border-radius: ${({ theme }) => theme.radius.r12};
 
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid ${({ theme }) => theme.colors.black9};
 
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.25),

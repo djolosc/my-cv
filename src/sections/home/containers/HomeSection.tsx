@@ -5,7 +5,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import SectionLayout from "@/shared/layout/SectionLayout";
 import ProfilePic from "../components/ProfilePic";
 import Clock from "../components/Clock";
-import EmailRow from "../components/EmailRow";
+import DownloadRow from "../components/DownloadRow";
 import { CompanyName } from "@/shared/components";
 
 import ClarivateLogo from "@/assets/logos/clrvt.svg";
@@ -48,7 +48,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
         </p>
       </AboutRow>
 
-      <EmailRow />
+      <DownloadRow />
     </SectionLayout>
   );
 };

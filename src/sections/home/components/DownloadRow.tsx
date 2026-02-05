@@ -1,42 +1,58 @@
 import { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboard } from "@fortawesome/free-regular-svg-icons";
+import {
+  faDownload,
+  faClipboard,
+  faCheck,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { Toast } from "@/shared/components";
 import { isDesktopDevice } from "@/utils/device";
+import CV from "@/assets/cv/resume.pdf"; // make sure you have the .d.ts for PDFs
 
-const EMAIL = "djsimovic@gmail.com";
-
-const EmailRow = () => {
+const DownloadRow = () => {
   const [toastVisible, setToastVisible] = useState(false);
   const [pressed, setPressed] = useState(false);
 
-  // Check device once
   const isDesktop = isDesktopDevice();
 
-  const copyEmail = useCallback(async (): Promise<void> => {
-    if (toastVisible) return;
+  const downloadCV = useCallback((): void => {
+    if (pressed) return; // prevent multiple clicks
 
     try {
       setPressed(true);
 
-      await navigator.clipboard.writeText(EMAIL);
-      navigator.vibrate?.(15);
-      setToastVisible(true);
+      if (isDesktop) {
+        // Desktop: download
+        const link = document.createElement("a");
+        link.href = CV;
+        link.download = "George-Simovic-CV.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setToastVisible(true);
+      } else {
+        // Mobile: open in new tab
+        window.open(CV, "_blank");
+      }
 
+      // Reset press animation
       setTimeout(() => setPressed(false), 200);
     } catch (e) {
-      console.error("Clipboard failed", e);
+      console.error("Download failed", e);
       setPressed(false);
     }
-  }, [toastVisible]);
+  }, [pressed]);
+
+  const navigateCV = () => {};
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
       const target = e.target as HTMLElement;
 
-      // Ignore when typing
+      // Ignore typing
       if (
         target.tagName === "INPUT" ||
         target.tagName === "TEXTAREA" ||
@@ -45,45 +61,47 @@ const EmailRow = () => {
         return;
       }
 
-      // C to copy
+      if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+
+      // C to download
       if (e.key.toLowerCase() === "c" && !e.repeat) {
-        copyEmail();
+        downloadCV();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [copyEmail]);
+  }, [downloadCV]);
 
   return (
     <>
       <EmailRowWrapper>
-        {isDesktop && (
+        {isDesktop ? (
           <span>
             Press{" "}
-            <CopyLetter onClick={copyEmail} $pressed={pressed}>
+            <CopyLetter onClick={downloadCV} $pressed={pressed}>
               C
             </CopyLetter>{" "}
-            to copy my email
+            to download my CV
           </span>
-        )}
-        {!isDesktop && (
+        ) : (
           <span>
-            <CopyTextButton onClick={copyEmail}>
-              <FontAwesomeIcon icon={faClipboard} /> Tap <Here>here</Here> to
-              copy my email
+            <CopyTextButton onClick={downloadCV}>
+              <FontAwesomeIcon icon={faLink} /> Tap <Here>here</Here> to check
+              my CV
             </CopyTextButton>
           </span>
         )}
       </EmailRowWrapper>
+
       <Toast visible={toastVisible} onClose={() => setToastVisible(false)}>
-        <FontAwesomeIcon icon={faClipboard} /> {EMAIL} copied!
+        <FontAwesomeIcon icon={faCheck} /> CV downloaded!
       </Toast>
     </>
   );
 };
 
-export default EmailRow;
+export default DownloadRow;
 
 const EmailRowWrapper = styled.div`
   margin-top: ${({ theme }) => theme.spacing.s24};
