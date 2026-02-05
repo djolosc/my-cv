@@ -39,6 +39,7 @@ export const theme = {
     s24: "24px",
     s32: "32px",
     s40: "40px",
+    s56: "56px",
     s96: "96px",
   },
   radius: {

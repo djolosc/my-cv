@@ -10,6 +10,7 @@ import {
   StackSection,
   PersonalSection,
   ContactSection,
+  Footer,
 } from "@/sections";
 import { CursorProvider } from "@/shared/context/CursorContext";
 import {
@@ -53,6 +54,7 @@ const App = () => {
             <StackSection sectionRef={stackRef} />
             <PersonalSection sectionRef={personalRef} />
             <ContactSection sectionRef={contactRef} />
+            <Footer />
 
             <Navigation sections={sections} />
           </StyledMain>
@@ -69,5 +71,5 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledMain = styled.main`
-  padding-bottom: ${({ theme }) => theme.spacing.s96};
+  /* padding-bottom: ${({ theme }) => theme.spacing.s96}; */
 `;
