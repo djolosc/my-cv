@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# 👋 Djordje Simovic — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A playful, fast, and responsive personal portfolio built to showcase my frontend work and engineering approach. The goal of this project is not just design — but clean structure, accessibility, and performance.
 
-Currently, two official plugins are available:
+🔗 Live: https://djordjesimovic.dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Highlights
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Fully responsive layout
+- Custom CV download logic (desktop download vs mobile open)
+- Accessibility-focused structure
+- Optimized asset loading
+- Modular component architecture
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧠 Architecture Philosophy
+
+This portfolio is structured as a reusable, scalable React project rather than a one-off static site.
+
+- Components are small and composable
+- Layout sections are isolated and easy to extend
+- Assets are optimized for performance
+- Utilities handle device-specific logic
+- Structure is designed for future growth
+
+---
+
+## 📁 Project Structure
+
+src/
+assets/ # Images, icons, CV, static files
+sections/ # Page-level sections
+components/ # Section-specific components
+container/ # Section layout containers
+shared/
+components/ # Global reusable components
+context/ # App-wide React context
+layout/ # Layout wrappers
+styles/ # Global styles + themes
+utils/ # Helper + device logic
+
+---
+
+## 🛠 Getting Started
+
+Requires Node 18+
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔮 Future Improvements
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Reusability layer (easier content swapping)
+- Animated SVG signature
