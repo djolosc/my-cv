@@ -38,6 +38,7 @@ This portfolio is structured as a reusable, scalable React project rather than a
 
 ## 📁 Project Structure
 
+```bash
 src/
 assets/ # Images, icons, CV, static files
 sections/ # Page-level sections
@@ -49,6 +50,7 @@ context/ # App-wide React context
 layout/ # Layout wrappers
 styles/ # Global styles + themes
 utils/ # Helper + device logic
+```
 
 ---
 
