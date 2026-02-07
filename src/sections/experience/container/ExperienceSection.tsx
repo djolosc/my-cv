@@ -19,24 +19,39 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
       years: "07/2024 - PRESENT",
       role: "Senior Frontend Engineer",
       company: "Clarivate",
-      description:
-        "Build a user-friendly web app that helps professionals manage their intellectual properties efficiently. Design interactive dashboards with real-time updates to make tracking and monitoring simple for users.",
+      summary:
+        "Worked on an enterprise platform for managing intellectual property portfolios, building large-scale dashboards and analytics workflows used by legal professionals and internal operational teams.",
+      performance:
+        "Optimized rendering and state architecture to support complex, data-heavy dashboards with frequent API-driven updates, improving responsiveness and stability at scale.",
+      architecture:
+        "Designed and implemented a microfrontend architecture, enabling independent feature ownership and scaling a modular frontend platform.",
+      ux: "Translated complex intellectual-property workflows into clear, intuitive dashboard experiences focused on speed and usability.",
       logo: ClarivateLogo,
     },
     {
       years: "11/2021 - 07/2024",
       role: "Frontend Engineer",
       company: "IVC Evidensia",
-      description:
-        "Work on a mobile app that supports veterinary clinics worldwide. In addition, develop a web app that streamlines daily tasks and makes workflows more intuitive and efficient for users.",
+      summary:
+        "Worked on a platform ecosystem supporting veterinary clinics across Europe, including a mobile app and internal operational tools used by clinic staff.",
+      performance:
+        "Delivered stable cross-platform features and improved responsiveness across mobile and web environments used daily in clinics.",
+      architecture:
+        "Built shared infrastructure across platforms, including seamless authentication, tracking tools, A/B experimentation systems, and a mobile notification framework.",
+      ux: "Improved navigation, forms, and data visibility to better match real-world clinic workflows.",
       logo: IvcLogo,
     },
     {
       years: "04/2021 - 11/2021",
       role: "Frontend Engineer",
       company: "Marble IT",
-      description:
-        "Develop a mobile app that helps users reconnect with contacts after losing their phone, ensuring a seamless and reliable experience.",
+      summary:
+        "Built a consumer mobile app focused on device recovery, helping users reconnect with contacts after phone loss.",
+      performance:
+        "Optimized responsiveness and reliability across a wide range of mobile devices.",
+      architecture:
+        "Owned the entire frontend architecture as the sole engineer, from component design to delivery.",
+      ux: "Implemented onboarding and recovery flows in close collaboration with design, ensuring smooth and trustworthy user experiences.",
       logo: MarbleLogo,
     },
   ];
@@ -61,7 +76,15 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 noPadding={exp.company === "Marble IT"}
               />
             </Heading>
-            <Description>{exp.description}</Description>
+            <Summary>{exp.summary}</Summary>
+            <CategoryTitle>⚡ Performance</CategoryTitle>
+            <Summary>{exp.performance}</Summary>
+
+            <CategoryTitle>🏛 Architecture</CategoryTitle>
+            <Summary>{exp.architecture}</Summary>
+
+            <CategoryTitle>✨ UX</CategoryTitle>
+            <Summary $noPadding>{exp.ux}</Summary>
           </Details>
         </ExperienceRow>
       ))}
@@ -104,7 +127,11 @@ const Heading = styled.span`
   align-items: center;
 `;
 
-const Description = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.fs16};
-  margin: 0;
+const Summary = styled.p<{ $noPadding?: boolean }>`
+  margin-bottom: ${({ theme, $noPadding }) =>
+    $noPadding ? 0 : theme.spacing.s12};
+`;
+
+const CategoryTitle = styled.p`
+  color: ${({ theme }) => theme.colors.grey2};
 `;
