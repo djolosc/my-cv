@@ -38,7 +38,7 @@ const Signature = () => {
     <SignatureWrapper ref={wrapperRef}>
       <Svg
         viewBox="411.1 127.6 927.5 335.9"
-        animate={animate}
+        $animate={animate}
         pathLength={pathLength}
       >
         <path
@@ -58,7 +58,7 @@ const SignatureWrapper = styled.div`
   padding-top: ${({ theme }) => theme.spacing.s40};
 `;
 
-const Svg = styled.svg<{ animate: boolean; pathLength: number }>`
+const Svg = styled.svg<{ $animate: boolean; pathLength: number }>`
   width: 200px;
   height: auto;
 
@@ -70,8 +70,8 @@ const Svg = styled.svg<{ animate: boolean; pathLength: number }>`
     stroke-linejoin: round;
     stroke-dasharray: ${({ pathLength }) => pathLength};
     stroke-dashoffset: ${({ pathLength }) => pathLength};
-    ${({ animate, pathLength }) =>
-      animate &&
+    ${({ $animate, pathLength }) =>
+      $animate &&
       css`
         animation: ${drawGradual(pathLength)} 2.5s forwards;
       `}

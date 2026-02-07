@@ -28,7 +28,8 @@ const LogoWrapper = styled.div`
 const LogoImg = styled.img`
   display: block;
   width: 56px;
-  height: auto;
+  height: 56px;
+
   border-radius: ${({ theme }) => theme.radius.r12};
 `;
 
