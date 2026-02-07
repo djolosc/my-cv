@@ -11,6 +11,11 @@ A playful, fast, and responsive personal portfolio built to showcase my frontend
 - React
 - TypeScript
 - Vite
+- Styled-components
+- FontAwesome
+- React Fast Marquee
+
+> Open-source libraries that make this project possible. Thanks to their creators!
 
 ---
 
