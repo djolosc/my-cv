@@ -21,6 +21,7 @@ A playful, fast, and responsive personal portfolio built to showcase my frontend
 - Accessibility-focused structure
 - Optimized asset loading
 - Modular component architecture
+- Animated SVG signature
 
 ---
 
@@ -66,4 +67,3 @@ npm run dev
 ## 🔮 Future Improvements
 
 - Reusability layer (easier content swapping)
-- Animated SVG signature
