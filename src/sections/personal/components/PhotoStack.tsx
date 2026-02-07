@@ -84,9 +84,11 @@ export const PhotoCard = styled.div<{ $index: number }>`
     `;
   }}
 
-  &:hover {
-    z-index: 10;
-    transform: scale(1.05) rotate(0deg);
+  @media (hover: hover) {
+    &:hover {
+      z-index: 10;
+      transform: scale(1.05) rotate(0deg);
+    }
   }
 
   @media (max-width: 768px) {

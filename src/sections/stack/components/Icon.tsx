@@ -1,3 +1,4 @@
+import { isDesktopDevice } from "@/utils/device";
 import { useState, type FC } from "react";
 import styled from "styled-components";
 
@@ -10,7 +11,10 @@ interface IconProps {
 const Icon: FC<IconProps> = ({ name, backgroundColor, icon }) => {
   const [hovered, setHovered] = useState(false);
 
+  const isDesktop = isDesktopDevice();
+
   const handleClick = () => {
+    if (isDesktop) return;
     setHovered(true);
 
     setTimeout(() => {

@@ -9,6 +9,7 @@ import DownloadRow from "../components/DownloadRow";
 import { CompanyName } from "@/shared/components";
 
 import ClarivateLogo from "@/assets/logos/clrvt.svg";
+import { isDesktopDevice } from "@/utils/device";
 
 interface HomeSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
@@ -16,6 +17,8 @@ interface HomeSectionProps {
 
 const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
   const CURRENT_COMPANY_URL = "https://clarivate.com";
+
+  const isMobile = !isDesktopDevice();
 
   return (
     <SectionLayout sectionRef={sectionRef} id="home" paddingTop={20}>
@@ -34,7 +37,7 @@ const HomeSection: React.FC<HomeSectionProps> = ({ sectionRef }) => {
 
       <AboutRow>
         <p>
-          Hey, I’m Djordje, a software engineer at{" "}
+          Hey, I’m Djordje, a software engineer at {isMobile && <br />}
           <a
             href={CURRENT_COMPANY_URL}
             target="_blank"
