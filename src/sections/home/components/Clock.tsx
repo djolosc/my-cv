@@ -1,3 +1,5 @@
+import { faClockFour } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -32,12 +34,28 @@ const Clock: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <ClockWrapper>{time}</ClockWrapper>;
+  return (
+    <ClockWrapper>
+      <ClockIcon icon={faClockFour} />
+      <ClockText>{time}</ClockText>
+    </ClockWrapper>
+  );
 };
 
 export default Clock;
 
 const ClockWrapper = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.s8};
+  align-items: center;
+`;
+
+const ClockIcon = styled(FontAwesomeIcon)`
+  height: 16px;
+  width: 16px;
+`;
+
+const ClockText = styled.div`
   font-family: "Geist Mono", monospace;
   font-size: ${({ theme }) => theme.fontSizes.fs12};
   white-space: nowrap;
