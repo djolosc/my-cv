@@ -7,10 +7,7 @@ const CustomCursor: React.FC = () => {
   const { hidden } = useCursor(); // get global hidden state
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
-
-  // Check device once
   const isDesktop = isDesktopDevice();
-  if (!isDesktop) return null;
 
   // track mouse position
   useEffect(() => {
@@ -42,22 +39,15 @@ const CustomCursor: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const magnet = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (
-        hovering &&
-        target &&
-        (target.tagName === "A" || target.tagName === "BUTTON")
-      ) {
-        const rect = target.getBoundingClientRect();
-        const targetX = rect.left + rect.width / 2;
-        const targetY = rect.top + rect.height / 2;
-      }
+    const magnet = () => {
+      // Magnetic effect: target center could drive cursor offset (TODO)
     };
 
     window.addEventListener("mousemove", magnet);
     return () => window.removeEventListener("mousemove", magnet);
   }, [hovering]);
+
+  if (!isDesktop) return null;
 
   return (
     <CursorDot

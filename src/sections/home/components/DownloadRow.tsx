@@ -2,8 +2,6 @@ import { useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faDownload,
-  faClipboard,
   faCheck,
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
@@ -44,9 +42,8 @@ const DownloadRow = () => {
       console.error("Download failed", e);
       setPressed(false);
     }
-  }, [pressed]);
+  }, [pressed, isDesktop]);
 
-  const navigateCV = () => {};
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
@@ -71,7 +68,7 @@ const DownloadRow = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [downloadCV]);
+  }, [downloadCV, isDesktop]);
 
   return (
     <>
