@@ -1,9 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
 import Clock from './Clock';
-import { theme } from '@/styles/theme';
 import { renderWithTheme } from '@/test/utils';
+import { act } from '@testing-library/react';
 
 
 describe('Clock', () => {
@@ -35,20 +34,17 @@ describe('Clock', () => {
   it('updates time every second', () => {
     const mockDate1 = new Date('2024-01-01T12:30:45Z');
     vi.setSystemTime(mockDate1);
-    
-    const { rerender } = renderWithTheme(<Clock />);
+  
+    renderWithTheme(<Clock />);
     const initialText = screen.getByText(/GMT/).textContent;
-    
+  
     const mockDate2 = new Date('2024-01-01T12:30:46Z');
     vi.setSystemTime(mockDate2);
-    vi.advanceTimersByTime(1000);
-    
-    rerender(
-      <ThemeProvider theme={theme}>
-        <Clock />
-      </ThemeProvider>
-    );
-    
+  
+    act(() => {
+      vi.advanceTimersByTime(1000);
+    });
+  
     const updatedText = screen.getByText(/GMT/).textContent;
     expect(updatedText).not.toBe(initialText);
   });

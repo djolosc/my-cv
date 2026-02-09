@@ -31,18 +31,19 @@ describe('Icon', () => {
     );
     const wrapper = container.querySelector('div');
     const label = screen.getByText('React');
-    
+  
     expect(label).toHaveStyle({ opacity: '0' });
-    
+  
     if (wrapper) {
-      const mouseEnterEvent = new MouseEvent('mouseenter', {
-        bubbles: true,
-        cancelable: true,
+      act(() => {
+        const mouseEnterEvent = new MouseEvent('mouseenter', {
+          bubbles: true,
+          cancelable: true,
+        });
+        wrapper.dispatchEvent(mouseEnterEvent);
       });
-      wrapper.dispatchEvent(mouseEnterEvent);
     }
-    
-    // Label should become visible
+  
     expect(label).toBeInTheDocument();
   });
 
@@ -115,18 +116,23 @@ describe('Icon', () => {
   it('cleans up timeout on unmount', () => {
     vi.spyOn(deviceUtils, 'isDesktopDevice').mockReturnValue(false);
     const clearTimeoutSpy = vi.spyOn(global, 'clearTimeout');
-    
+  
     const { unmount } = renderWithTheme(
       <Icon name="React" icon="/react.svg" />
     );
+  
     const wrapper = screen.getByAltText('React').closest('div');
-    
+  
     if (wrapper) {
-      wrapper.click();
+      act(() => {
+        wrapper.click(); // wrap the click that triggers state
+      });
     }
-    
-    unmount();
-    
+  
+    act(() => {
+      unmount(); // wrap unmount because it clears the timeout which triggers state cleanup
+    });
+  
     expect(clearTimeoutSpy).toHaveBeenCalled();
     clearTimeoutSpy.mockRestore();
   });

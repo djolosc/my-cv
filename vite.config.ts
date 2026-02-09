@@ -19,15 +19,19 @@ export default defineConfig({
       reporter: ['text', 'html', 'clover'],
       include: ['src/**/*.{ts,tsx}'],
       exclude: [
-        'src/**/*.test.{ts,tsx}',
+        '**/*.test.{ts,tsx}',
         'src/test/**',
-        'src/**/*.d.ts',
+        '**/*.d.ts',
         'src/main.tsx',
+        'src/App.tsx',
         'src/styles/**',
         'src/shared/context/**',
+        'src/**/index.{ts,tsx}',
       ],
-      // @ts-expect-error - 'all' is supported at runtime; Vitest types may not include it yet
+      // @ts-expect-error - 'all' is supported at runtime
       all: true,
     },
-  },
+  }
 });
+
+
