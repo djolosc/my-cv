@@ -126,7 +126,6 @@ describe('DownloadRow', () => {
       const keyEvent = new KeyboardEvent('keydown', {
         key: 'c',
         bubbles: true,
-        target: input,
       });
       window.dispatchEvent(keyEvent);
     });
@@ -138,7 +137,6 @@ describe('DownloadRow', () => {
       const keyEvent = new KeyboardEvent('keydown', {
         key: 'c',
         bubbles: true,
-        target: input,
       });
       window.dispatchEvent(keyEvent);
     });
