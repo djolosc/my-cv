@@ -66,10 +66,10 @@ All critical components and utilities are tested. Current coverage:
 
 | Metric     | % Covered |
 |------------|-----------|
-| Statements | 96.7%     |
-| Branches   | 85.5%     |
-| Functions  | 96.0%     |
-| Lines      | 97.7%     |
+| Statements | 96.8%     |
+| Branches   | 84.3%     |
+| Functions  | 96.4%     |
+| Lines      | 97.9%     |
 
 > Coverage generated with Vitest + V8
 

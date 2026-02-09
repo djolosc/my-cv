@@ -3,7 +3,7 @@ import { render, act } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import CustomCursor from './CustomCursor';
-import { CursorProvider, useCursor } from '../context/CursorContext';
+import { CursorProvider, useCursor } from '../../contexts/CursorContext';
 import { theme } from '@/styles/theme';
 import * as deviceUtils from '@/utils/device';
 

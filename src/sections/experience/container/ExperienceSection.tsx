@@ -5,7 +5,7 @@ import IvcLogo from "@/assets/logos/ivc.svg";
 import MarbleLogo from "@/assets/logos/marble.svg";
 
 import { CompanyName } from "@/shared/components";
-import SectionLayout from "@/shared/layout/SectionLayout";
+import SectionLayout from "@/sections/layout/SectionLayout";
 
 interface ExperienceSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;

@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import DownloadRow from './DownloadRow';
 import { theme } from '@/styles/theme';
-import { CursorProvider } from '@/shared/context/CursorContext';
+import { CursorProvider } from '@/contexts/CursorContext';
 import * as deviceUtils from '@/utils/device';
 
 const renderWithProviders = (component: React.ReactElement) => {

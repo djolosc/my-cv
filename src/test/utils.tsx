@@ -2,7 +2,7 @@ import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import { theme } from '@/styles/theme';
-import { CursorProvider } from '@/shared/context/CursorContext';
+import { CursorProvider } from '@/contexts/CursorContext';
 
 export const renderWithTheme = (
   component: React.ReactElement,

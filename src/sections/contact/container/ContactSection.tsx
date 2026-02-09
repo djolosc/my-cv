@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import styled from "styled-components";
 
-import SectionLayout from "@/shared/layout/SectionLayout";
+import SectionLayout from "@/sections/layout/SectionLayout";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import GitHub from "@/assets/logos/GitHubG.svg";
 import LinkedIn from "@/assets/logos/LinkedIn.svg";

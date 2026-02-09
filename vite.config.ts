@@ -27,6 +27,7 @@ export default defineConfig({
         'src/styles/**',
         'src/shared/context/**',
         'src/**/index.{ts,tsx}',
+        'src/**/AppRouter.{ts,tsx}',
       ],
       // @ts-expect-error - 'all' is supported at runtime
       all: true,

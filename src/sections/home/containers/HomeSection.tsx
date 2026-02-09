@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-import SectionLayout from "@/shared/layout/SectionLayout";
+import SectionLayout from "@/sections/layout/SectionLayout";
 import ProfilePic from "../components/ProfilePic";
 import Clock from "../components/Clock";
 import DownloadRow from "../components/DownloadRow";

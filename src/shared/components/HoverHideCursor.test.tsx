@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import HoverHideCursor from './HoverHideCursor';
-import { CursorProvider } from '../context/CursorContext';
+import { CursorProvider } from '../../contexts/CursorContext';
 import { theme } from '@/styles/theme';
 
 const renderWithProviders = (component: React.ReactElement) => {

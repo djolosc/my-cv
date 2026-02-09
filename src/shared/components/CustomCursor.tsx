@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useCursor } from "../context/CursorContext"; // import the context
+import { useCursor } from "../../contexts/CursorContext"; // import the context
 import { isDesktopDevice } from "@/utils/device";
 
 const CustomCursor: React.FC = () => {

@@ -1,4 +1,4 @@
-import { useCursor } from "../context/CursorContext";
+import { useCursor } from "../../contexts/CursorContext";
 import type { ReactNode } from "react";
 
 interface Props {

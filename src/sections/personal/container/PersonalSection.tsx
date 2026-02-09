@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import styled from "styled-components";
-import SectionLayout from "@/shared/layout/SectionLayout";
+import SectionLayout from "@/sections/layout/SectionLayout";
 import SpotifyTrackCard from "../components/SpotifyTrackCard";
 import PhotoStack from "../components/PhotoStack";
 

@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import React, { createRef } from 'react';
 import HomeSection from './HomeSection';
 import { theme } from '@/styles/theme';
-import { CursorProvider } from '@/shared/context/CursorContext';
+import { CursorProvider } from '@/contexts/CursorContext';
 import * as deviceUtils from '@/utils/device';
 
 const renderWithProviders = (component: React.ReactElement) => {

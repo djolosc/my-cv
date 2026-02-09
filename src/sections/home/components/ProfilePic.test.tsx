@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import ProfilePic from './ProfilePic';
 import { theme } from '@/styles/theme';
-import { CursorProvider } from '@/shared/context/CursorContext';
+import { CursorProvider } from '@/contexts/CursorContext';
 
 const renderWithProviders = (component: React.ReactElement) => {
   return render(

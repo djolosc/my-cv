@@ -17,7 +17,7 @@ import VueSvg from "@/assets/logos/Vue.svg";
 import YarnSvg from "@/assets/logos/Yarn.svg";
 
 import Icon from "../components/Icon";
-import SectionLayout from "@/shared/layout/SectionLayout";
+import SectionLayout from "@/sections/layout/SectionLayout";
 
 interface StackSectionProps {
   sectionRef: React.RefObject<HTMLElement | null>;
