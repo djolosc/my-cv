@@ -60,6 +60,21 @@ utils/ # Helper + device logic
 
 ---
 
+## ✅ Test Coverage
+
+All critical components and utilities are tested. Current coverage:
+
+| Metric     | % Covered |
+|------------|-----------|
+| Statements | 96.7%     |
+| Branches   | 85.5%     |
+| Functions  | 96.0%     |
+| Lines      | 97.7%     |
+
+> Coverage generated with Vitest + V8
+
+---
+
 ## 🛠 Getting Started
 
 Requires Node 18+
