@@ -1,15 +1,12 @@
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React, { createRef } from 'react';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { screen } from '@testing-library/react';
+import { createRef } from 'react';
 import Navigation from './Navigation';
-import { theme } from '@/styles/theme';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
+
 
 describe('Navigation', () => {
   const mockScrollIntoView = vi.fn();

@@ -1,13 +1,10 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, act } from '@testing-library/react';
+import {  act } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import React from 'react';
 import Signature from './Signature';
 import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 // Mock getTotalLength globally before any tests run
 Object.defineProperty(Element.prototype, 'getTotalLength', {

@@ -1,13 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
+import { screen } from '@testing-library/react';
 import Footer from './Footer';
-import { theme } from '@/styles/theme';
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
+import { renderWithTheme } from '@/test/utils';
 
 // Mock getTotalLength for SVGPathElement
 Object.defineProperty(Element.prototype, 'getTotalLength', {

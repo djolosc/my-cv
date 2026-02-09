@@ -1,14 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
+import { screen } from '@testing-library/react';
 import LinkItem from './LinkItem';
-import { theme } from '@/styles/theme';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('LinkItem', () => {
   it('renders name and link text', () => {

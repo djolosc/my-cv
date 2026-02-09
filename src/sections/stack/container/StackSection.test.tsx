@@ -1,9 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React, { createRef } from 'react';
+import { screen } from '@testing-library/react';
+import { createRef } from 'react';
 import StackSection from './StackSection';
-import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 import * as deviceUtils from '@/utils/device';
 
 // Mock ResizeObserver for react-fast-marquee
@@ -12,10 +11,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
   disconnect() {}
 } as unknown as typeof ResizeObserver;
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('StackSection', () => {
   beforeEach(() => {

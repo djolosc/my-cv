@@ -1,13 +1,10 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React, { useRef } from 'react';
+import { screen } from '@testing-library/react';
+import { useRef } from 'react';
 import SectionLayout from './SectionLayout';
 import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('SectionLayout', () => {
   it('renders children', () => {

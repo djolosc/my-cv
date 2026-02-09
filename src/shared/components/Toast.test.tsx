@@ -1,13 +1,9 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import {  screen } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import React from 'react';
 import Toast from './Toast';
 import { theme } from '@/styles/theme';
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
+import { renderWithTheme } from '@/test/utils';
 
 describe('Toast', () => {
   beforeEach(() => {

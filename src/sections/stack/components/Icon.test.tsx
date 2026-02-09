@@ -1,14 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, act } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
+import { screen, act } from '@testing-library/react';
 import Icon from './Icon';
-import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 import * as deviceUtils from '@/utils/device';
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('Icon', () => {
   beforeEach(() => {

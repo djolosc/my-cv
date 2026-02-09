@@ -1,13 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
 import Header from './Header';
-import { theme } from '@/styles/theme';
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
+import { renderWithTheme } from '@/test/utils';
 
 describe('Header', () => {
   it('renders empty div', () => {

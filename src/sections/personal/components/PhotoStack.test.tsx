@@ -1,13 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
+import { screen } from '@testing-library/react';
 import PhotoStack from './PhotoStack';
-import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('PhotoStack', () => {
   it('renders all four photos', () => {

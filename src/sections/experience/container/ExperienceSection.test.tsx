@@ -1,13 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React, { createRef } from 'react';
+import { screen } from '@testing-library/react';
+import { createRef } from 'react';
 import ExperienceSection from './ExperienceSection';
-import { theme } from '@/styles/theme';
-
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
+import { renderWithTheme } from '@/test/utils';
 
 describe('ExperienceSection', () => {
   it('renders EXPERIENCE title', () => {

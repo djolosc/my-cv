@@ -1,13 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
-import React from 'react';
+import { screen } from '@testing-library/react';
 import SpotifyTrackCard from './SpotifyTrackCard';
-import { theme } from '@/styles/theme';
+import { renderWithTheme } from '@/test/utils';
 
-const renderWithTheme = (component: React.ReactElement) => {
-  return render(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
-};
 
 describe('SpotifyTrackCard', () => {
   it('renders track name', () => {
