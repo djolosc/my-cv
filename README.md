@@ -47,7 +47,7 @@ This portfolio is structured as a reusable, scalable React project rather than a
 ```bash
 src/
 ├── assets/      # Static files (images, logos, CV)
-├── screens/     # App screens / routes
+├── screens/     # App screens
 ├── sections/    # Page sections used inside screens
 ├── shared/      # Reusable global components
 ├── router/      # App routing configuration
