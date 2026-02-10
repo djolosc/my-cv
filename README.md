@@ -46,16 +46,15 @@ This portfolio is structured as a reusable, scalable React project rather than a
 
 ```bash
 src/
-assets/ # Images, icons, CV, static files
-sections/ # Page-level sections
-components/ # Section-specific components
-container/ # Section layout containers
-shared/
-components/ # Global reusable components
-context/ # App-wide React context
-layout/ # Layout wrappers
-styles/ # Global styles + themes
-utils/ # Helper + device logic
+├── assets/      # Static files (images, logos, CV)
+├── screens/     # App screens / routes
+├── sections/    # Page sections used inside screens
+├── shared/      # Reusable global components
+├── router/      # App routing configuration
+├── contexts/    # Global React context
+├── styles/      # Theme + global styles
+├── utils/       # Helper utilities
+├── test/        # Test setup and helpers
 ```
 
 ---
@@ -65,7 +64,7 @@ utils/ # Helper + device logic
 All critical components and utilities are tested. Current coverage:
 
 | Metric     | % Covered |
-|------------|-----------|
+| ---------- | --------- |
 | Statements | 96.8%     |
 | Branches   | 84.3%     |
 | Functions  | 96.4%     |
